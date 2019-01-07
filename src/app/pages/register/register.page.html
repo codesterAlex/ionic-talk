@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Signup</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item large margin-top>
+        <ion-icon style="zoom:3.0;color: #3880FF" name="chatboxes" ></ion-icon>
+        <h2> Universal Talk </h2>
+    </ion-item>
+    <form [formGroup]="credentialsForm2" (ngSubmit)="register()" margin-bottom>
+        <ion-item>
+            <ion-label position="floating">First Name</ion-label>
+            <ion-input type="text" formControlName="firstName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Last Name</ion-label>
+            <ion-input type="text" formControlName="lastName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input type="text" formControlName="userName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="userEmail"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Language</ion-label>
+            <ion-input type="text" formControlName="language"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="userPassword"></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit" [disabled]="!credentialsForm2.valid">Signup</ion-button>
+    </form>
+    <ion-button round outline margin="center" style="color: #633ce0; border: 2px solid #633ce0" (click)="openLogin()" color="#f4f5f8">Already have an account.</ion-button>
+</ion-content>

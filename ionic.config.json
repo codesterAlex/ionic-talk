@@ -1,0 +1,7 @@
+{
+  "name": "UniversalTalk",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

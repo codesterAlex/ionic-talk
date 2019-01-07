@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-item large margin-top>
+        <ion-icon style="zoom:3.0;color: #3880FF" name="chatboxes" ></ion-icon>
+        <h2> Universal Talk </h2>
+    </ion-item>
+    <form [formGroup]="credentialsForm" (ngSubmit)="onSubmit()" margin-bottom>
+        <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="userEmail"></ion-input>
+        </ion-item>
+        <ion-item margin-bottom>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="userPassword"></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit" [disabled]="!credentialsForm.valid">Login</ion-button>
+    </form>
+    <ion-button round outline margin="center" style="color: #633ce0;" (click)="openSignup()" color="#f4f5f8">Create an account.</ion-button>
+</ion-content>
